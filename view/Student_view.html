@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+  <link rel="stylesheet" href="../dist/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-aria/angular-aria.js"></script>
+  <script src="../node_modules/angular-animate/angular-animate.js"></script>
+  <script src="../node_modules/angular-messages/angular-messages.js"></script>
+  <script src="../node_modules/angular-material/angular-material.js"></script>
+  <script src="../scripts/app.js" type="module"></script>
+</head>
+  <body ng-app="App" ng-controller="myController">
+    <header>
+      <h1><span>EzStudy</span></h1>
+      <h1><a href="">Học sinh</a></h1>
+      <h1><a href="Class_view.html">Lớp</a></h1>
+    </header>
+    <div class="grid">
+      <main class="grid__main">
+          <div class="grid__main__search" ng-include="'./direction/top_student.html'"></div>
+          <div class="grid__main__table" ng-include="'./board/student_board.html'"></div>
+          <div class="grid__main__operation" ng-include="'./direction/bottom_student.html'"></div>
+        </main>
+        <aside class="grid__sidebar">
+          <div ng-include="'./popup/Student_popup.html'"></div>
+        </aside>
+    </div>
+    <div ng-if="data_confirm.confirmOpen" ng-include="'./popup/confirm.html'"></div>
+  </body>
+</html>

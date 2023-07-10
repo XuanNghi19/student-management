@@ -1,0 +1,48 @@
+.td_stt {
+  width: 50px;
+}
+
+.td_operation {
+  width: 200px;
+  text-align: center;
+}
+
+.button_operation {
+  width: 60px;
+  height: 30px;
+}
+
+.button_add_student {
+  height: 35px;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.popup {
+  width: 250px;
+  height: 400px;
+  border: 1px solid var(--tbody-background-color);
+  background-color: var(--tbody-background-color);
+  border-radius: 5px;
+  
+  &__content {
+    height: 300px;
+    padding: 20px;
+    &__dependent {
+      padding: 10px 0;
+    }
+  }
+  &__operation {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    &__dependent {
+      margin-top: 10px;
+      width: 60px;
+      height: 40px;
+      text-align: center;
+    }
+  }
+}

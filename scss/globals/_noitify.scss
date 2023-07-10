@@ -1,0 +1,29 @@
+.noitify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--comfirm-background-color);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: var(--notification-backgrounf-color);
+
+    &__dependent {
+      padding: 20px;
+      padding-top: 60px;
+      font-size: 110%;
+      font-weight: 500;
+      display: flex;
+      gap: 70px;
+      justify-content: center;
+    } 
+  }
+}

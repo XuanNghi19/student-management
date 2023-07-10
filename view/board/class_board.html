@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <td class="td_stt">#</td>
+      <td>Lớp</td>
+      <td class="td_operation">Thao tác</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="type in pagination_type.arryPage[pagination_type.pageSelect]">
+      <td class="td_stt">{{type.stt}}</td>
+      <td>{{type.data.name}}</td>
+      <td class="td_operation">
+        <button ng-click="showPopup('type', pagination_type.pageSelect, type.data.id)">Sửa</button>
+        <button ng-click="showConfirm('type', pagination_type.pageSelect, type.data.id)">Xóa</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

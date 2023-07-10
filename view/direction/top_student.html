@@ -1,0 +1,6 @@
+<input class="box_search" type="text" ng-model="pupil.name" ng-init="pupil.name=''" placeholder="Họ tên ..."/>
+<input class="box_search" type="number" ng-model="pupil.age" ng-init="pupil.age=null" placeholder="Tuổi ..."/>
+<select class="box_search" ng-model="pupil.type" ng-options="item.name for item in types" ng-init="pupil.type=null">
+  <option value="">Tất cả các lớp</option>
+</select>
+<button ng-click="search_student(pupil)">Tìm kiếm</button>

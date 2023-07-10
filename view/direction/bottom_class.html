@@ -1,0 +1,5 @@
+<button class="button_operation" ng-click="min_or_max('min' , 'type')">Min</button>
+<button class="button_operation" ng-click="next_or_prev('-' , 'type')"><<</button>
+<button class="button_operation" ng-repeat="selectNum in pagination_type.numberArryPage" ng-click="selectPage(selectNum, 'type')">{{selectNum + 1}}</button>
+<button class="button_operation" ng-click="next_or_prev('+' , 'type')">>></button>
+<button class="button_operation" ng-click="min_or_max('max' , 'type')">Max</button>

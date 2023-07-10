@@ -1,0 +1,44 @@
+<button class="button_add_student" ng-hide="control.popupOpen" ng-click="showPopup('students', null, renID_student.id)">Thêm học sinh</button>
+<form class="popup" name="studentForm" ng-show="control.popupOpen">
+  <div class="popup__content">
+    <div class="popup__content__dependent">
+      <label>
+        <p>Họ tên:</p>
+        <input type="text" name="fullName" ng-model="person.name" ng-minlength="4" n-maxlength="150" required >
+      </label>
+      <div role="alert">
+        <span class="error" ng-show="studentForm.fullName.$error.required">*Vui lòng nhập họ và tên</span>
+        <span class="error" ng-show="studentForm.fullName.$error.minlength">*Quá ngắn</span>
+        <span class="error" ng-show="studentForm.fullName.$error.maxlength">*Quá dài</span>
+      </div>
+    </div>
+    <div class="popup__content__dependent">
+      <label>
+        <p class="md-subhead">Năm sinh:</p>
+        <input name="year_of_birth" type="date" ng-model="person.year_of_birth" required>
+      </label>
+      <div role="alert">
+        <span class="error" ng-show="studentForm.year_of_birth.$error.required">*Vui lòng nhập năm sinh</span>
+      </div>
+    </div>
+    <div class="popup__content__dependent">
+      <label>
+        <p>Lớp:</p>
+        <select name="type" ng-model="person.type" ng-options="item.name for item in types"></select>
+      </label>
+    </div>
+  </div>
+  <div class="popup__operation">
+    <button class="popup__operation__dependent" ng-click="student_cancel()">Thoát</button>
+    <button class="popup__operation__dependent" ng-click="validate_student()">Lưu</button>
+  </div>
+</form>
+
+<div class="noitify" ng-show="show_notify.is">
+  <div class="noitify__content">
+    <div class="noitify__content__dependent">Bạn nhập chưa đúng, xin vui lòng nhập lại!</div>
+    <div class="noitify__content__dependent">
+      <button ng-click="cancel_noitify()">Thoát</button>
+    </div>
+  </div>
+</div>

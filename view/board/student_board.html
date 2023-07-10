@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <td class="td_stt">#</td>
+      <td>Họ và tên</td>
+      <td>Tuổi</td>
+      <td>Lớp</td>
+      <td class="td_operation">Thao tác</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="student in pagination_student.arryPage[pagination_student.pageSelect]">
+      <td class="td_stt">{{student.stt}}</td>
+      <td>{{student.data.name}}</td>
+      <td class="td_operation">{{student.data.age}}</td>
+      <td class="td_operation">{{student.data.type.name}}</td>
+      <td class="td_operation">
+        <button ng-click="showPopup('students', pagination_student.pageSelect, student.data.id)">Sửa</button>
+        <button ng-click="showConfirm('students', pagination_student.pageSelect, student.data.id)">Xóa</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

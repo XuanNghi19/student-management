@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  margin-inline: auto;
+
+  &__main, &__sidebar {
+    // padding: 20px;
+  }
+
+  &__main {
+    // background-color: rgb(2, 6, 123);
+    padding: 0;
+    &__search {
+      // background-color: aquamarine;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 20px;
+      gap: 10px;
+    }
+    &__table{
+      // background-color: darkred;
+      display: flex;
+      justify-content: center;
+    }
+    &__operation {
+      // background-color: chartreuse;
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+  }
+
+  &__sidebar {
+    // background-color: rgb(101, 0, 101);
+  }
+}

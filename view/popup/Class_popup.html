@@ -1,0 +1,37 @@
+<button class="button_add_student" ng-hide="control.popupOpen" ng-click="showPopup('type', null, renID_type.id)">Tạo lớp</button>
+<form class="popup" name="typeForm" ng-show="control.popupOpen">
+  <div class="popup__content">
+    <div class="popup__content__dependent">
+      <label>
+        <p>Tên Lớp:</p>
+        <input name="typeName" type="text" ng-model="type.name" ng-minlength="4" ng-maxlength="100" required>
+      </label>
+      <div role="alert">
+        <span class="error" ng-show="typeForm.typeName.$error.required">*Vui lòng nhập tên</span>
+        <span class="error" ng-show="typeForm.typeName.$error.minlength">*Quá ngắn</span>
+        <span class="error" ng-show="typeForm.typeName.$error.maxnlength">*Quá dài</span>
+      </div>
+    </div>
+    <div class="popup__content__dependent">
+      <label>
+        <p>Thuộc:</p>
+        <select ng-model="type.pType" ng-options="item.name for item in types">
+          <option value="">null</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="popup__operation">
+    <button class="popup__operation__dependent" ng-click="type_cancel()">Thoát</button>
+    <button class="popup__operation__dependent" ng-click="validate_type()">Lưu</button>
+  </div>
+</form>
+
+<div class="noitify" ng-show="show_notify.is">
+  <div class="noitify__content">
+    <div class="noitify__content__dependent">Bạn nhập chưa đúng, xin vui lòng nhập lại!</div>
+    <div class="noitify__content__dependent">
+      <button ng-click="cancel_noitify()">Thoát</button>
+    </div>
+  </div>
+</div>

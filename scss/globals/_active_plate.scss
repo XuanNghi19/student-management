@@ -1,0 +1,25 @@
+@use '../util';
+
+input {
+  height: 30px;
+  border: 1px solid var(--input-background-color);
+  border-radius: 5px;
+  background-color: var(--input-background-color);
+}
+
+select {
+  border: 1px solid var(--input-background-color);
+  border-radius: 5px;
+  background-color: var(--input-background-color);
+}
+
+button {
+  border: 0px;
+  border-radius: 5px;
+  background-color: var(--button-background-color);
+  margin: 0 10px;
+
+  &:hover {
+    background-color:  rgba(163, 207, 251, 0.5);
+  }
+}
